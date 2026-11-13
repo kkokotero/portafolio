@@ -8,17 +8,15 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Ballet&family=League+Script&family=Google+Sans:wght@400..700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
         rel="stylesheet">
 </head>
 
-<body class="font-['Google_Sans',sans-serif] min-h-screen bg-black text-white h-[200dvh]">
+<body class="font-['JetBrains+Mono',monospace] min-h-screen bg-black text-white h-[200dvh]">
     <header
         class="fixed z-10 top-0 left-0 right-0 flex items-center justify-between px-6 py-4 md:px-16 md:py-6 bg-gradient-to-b from-[#111111]/65 via-[#1a1a1a]/20 to-transparent">
         <section>
-            <p
-                class="font-['League_Script',cursive] font-bold text-base md:text-xl leading-none font-normal [-webkit-text-stroke:0.2px_currentColor] text-white">
+            <p class="font-bold text-base md:text-xl leading-none [-webkit-text-stroke:0.2px_currentColor] text-white">
                 Jheivy Moreno</p>
         </section>
         <section class="flex items-center gap-3 text-sm md:text-base text-white/80">
@@ -34,21 +32,21 @@
             class="hero relative isolate flex w-full h-[100dvh] overflow-hidden bg-gradient-to-b from-[#0f0f0f] to-[#1a1a1a]">
             <!-- Fondo -->
             <article class="hero--page__image absolute inset-0 -z-10 overflow-hidden">
-                <picture class="absolute inset-0 block h-full w-full">
-                    <source media="(max-width: 600px)" srcset="./assets/images/hero/mobile.png">
-                    <img src="./assets/images/hero/desktop.png" alt="Imagen adaptable"
+                <picture class="absolute inset-0 block h-full w-full" alt="">
+                    <source media="(max-width: 600px)" srcset="./assets/images/hero/mobile.png" alt="">
+                    <img src="./assets/images/hero/desktop.png" alt=""
                         class="block h-full w-full object-cover scale-105">
                 </picture>
                 <div aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-black via-black/0 to-transparent">
                     <img aria-hidden="true" src="./assets/images/hero/noise.png"
-                        class="absolute top-0 left-0 w-[100dvw] object-cover z-10">
+                        class="absolute top-0 left-0 w-[100dvw] object-cover z-10" alt="">
                 </div>
             </article>
             <!-- Contenido -->
             <article class="hero--page__content relative z-10 flex w-full flex-col justify-center p-6 md:p-16">
                 <div class="self-start">
                     <h1
-                        class="font-['Ballet',cursive] text-[clamp(7rem,12.5vw,11.25rem)] leading-none font-normal text-white drop-shadow-md text-center md:text-left">
+                        class="text-[clamp(4rem,12.5vw,9rem)] leading-none font-normal text-white drop-shadow-md text-center md:text-left">
                         Jheivy Moreno</h1>
                     <p
                         class="mt-4 mx-auto max-w-[38rem] text-center text-base text-white/80 md:mr-0 md:ml-auto md:text-right md:text-xl md:translate-x-[25%]">
