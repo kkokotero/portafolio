@@ -13,9 +13,9 @@
         rel="stylesheet">
 </head>
 
-<body class="font-['Google_Sans',sans-serif] min-h-screen bg-[#0f0f0f] text-white h-[200dvh]">
+<body class="font-['Google_Sans',sans-serif] min-h-screen bg-black text-white h-[200dvh]">
     <header
-        class="fixed z-10 top-0 left-0 right-0 flex items-center justify-between px-6 py-4 md:px-16 md:py-6 bg-gradient-to-b from-[#111111]/65 via-[#1a1a1a]/20 to-transparent backdrop-blur-[3px]">
+        class="fixed z-10 top-0 left-0 right-0 flex items-center justify-between px-6 py-4 md:px-16 md:py-6 bg-gradient-to-b from-[#111111]/65 via-[#1a1a1a]/20 to-transparent">
         <section>
             <p
                 class="font-['League_Script',cursive] font-bold text-base md:text-xl leading-none font-normal [-webkit-text-stroke:0.2px_currentColor] text-white">
@@ -37,17 +37,16 @@
                 <picture class="absolute inset-0 block h-full w-full">
                     <source media="(max-width: 600px)" srcset="./assets/images/hero/mobile.png">
                     <img src="./assets/images/hero/desktop.png" alt="Imagen adaptable"
-                        class="block h-full w-full object-cover scale-105 blur-[5px]">
+                        class="block h-full w-full object-cover scale-105">
                 </picture>
-                <div aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-black via-black/40 to-transparent">
+                <div aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-black via-black/0 to-transparent">
+                    <img aria-hidden="true" src="./assets/images/hero/noise.png"
+                        class="absolute top-0 left-0 w-[100dvw] object-cover z-10">
                 </div>
             </article>
             <!-- Contenido -->
             <article class="hero--page__content relative z-10 flex w-full flex-col justify-center p-6 md:p-16">
                 <div class="self-start">
-                    <p
-                        class="translate-y-[120%] text-right font-['League_Script',cursive] text-[1.8rem] font-bold text-yellow-400 [-webkit-text-stroke:0.2px_currentColor] md:text-[2.7rem] hidden md:block">
-                        kkoko</p>
                     <h1
                         class="font-['Ballet',cursive] text-[clamp(7rem,12.5vw,11.25rem)] leading-none font-normal text-white drop-shadow-md text-center md:text-left">
                         Jheivy Moreno</h1>
