@@ -1,21 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jheivy Moreno - kkoko</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ballet&family=League+Script&family=Google+Sans:wght@400..700&display=swap" rel="stylesheet">
 </head>
-<body>
+
+<body class="font-['Google_Sans',sans-serif]">
     <header>
 
     </header>
 
     <main>
-        <section class="hero--page">
-            <article class="hero--page__content">
-                <img src="./assets/images/name.svg" alt="Jheivy Moreno" class="hero--page__content__name">
+        <section class="hero relative isolate flex w-full h-[100dvh] overflow-hidden">
+            <!-- Fondo -->
+            <article class="hero--page__image absolute inset-0 -z-10 overflow-hidden">
+                <picture class="absolute inset-0 block h-full w-full">
+                    <source media="(max-width: 600px)" srcset="./assets/images/hero/mobile.png">
+                    <img src="./assets/images/hero/desktop.png" alt="Imagen adaptable"
+                        class="block h-full w-full object-cover scale-105 blur-[5px]">
+                </picture>
+                <div aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-black via-black/40 to-transparent">
+                </div>
             </article>
-            <article class="hero--page__image">...</article>
+
+            <!-- Contenido -->
+            <article class="hero--page__content relative z-10 flex w-full flex-col justify-center p-6 md:p-16">
+                <div class="self-start -translate-y-6">
+                    <p
+                        class="translate-y-[130%] text-right font-['League_Script',cursive] text-[1.8rem] font-bold text-yellow-400 [-webkit-text-stroke:0.2px_currentColor] md:text-[2.7rem]">
+                        kkoko</p>
+                    <h1
+                        class="font-['Ballet',cursive] text-[clamp(3.75rem,12.5vw,11.25rem)] leading-none font-normal text-white drop-shadow-md">
+                        Jheivy Moreno</h1>
+                    <p class="mt-4 ml-auto max-w-[33.6rem] text-right text-base text-white/80 md:text-lg">
+                        Desarrollador Full-Stack y Artista de Colombia, especializado en el desarrollo de experiencias
+                        únicas.</p>
+                </div>
+            </article>
         </section>
     </main>
 
@@ -23,4 +50,5 @@
 
     </footer>
 </body>
+
 </html>
