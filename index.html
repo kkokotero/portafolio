@@ -1,72 +1,97 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Jheivy Silva - kkoko</title>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+            rel="stylesheet"
+        />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jheivy Moreno - kkoko</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
-        rel="stylesheet">
-</head>
-
-<body class="font-['JetBrains+Mono',monospace] min-h-screen bg-black text-white h-[200dvh]">
-    <header
-        class="fixed z-10 top-0 left-0 right-0 flex items-center justify-between px-6 py-4 md:px-16 md:py-6 bg-gradient-to-b from-[#111111]/65 via-[#1a1a1a]/20 to-transparent">
-        <section class="hidden md:flex">
-            <p class="text-base md:text-xl leading-none [-webkit-text-stroke:0.2px_currentColor] text-white">
-                Jheivy Moreno</p>
-        </section>
-        <section class="flex md:hidden">
-            <p class="font-bold text-xl leading-none [-webkit-text-stroke:0.2px_currentColor] text-white">
-                JS</p>
-        </section>
-        <section class="hidden md:flex items-center gap-3 text-sm md:text-base text-white/80">
-            <a href="#about" class="py-2 px-5 rounded-full hover:bg-[#fff]/20">About</a>
-            <a href="#skills" class="py-2 px-5 rounded-full hover:bg-[#fff]/20">Skills</a>
-            <a href="#projects" class="py-2 px-5 rounded-full hover:bg-[#fff]/20">Projects</a>
-            <a href="#contact" class="py-2 px-5 rounded-full bg-[#0f0f0f]/30 hover:bg-[#0f0f0f]/60">Contact</a>
-        </section>
-        <section class="block md:hidden">
-            <svg class="text-xl text-white rounded-full bg-[#0f0f0f]/30 hover:bg-[#0f0f0f]/60 p-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="1em" width="1em" fill="currentColor"><path d="M3,18V16H21v2H3Zm0-5V11H21v2H3ZM3,8V6H21V8H3Z"/></svg>
-        </section>
-    </header>
-
-    <main>
-        <section
-            class="hero relative isolate flex w-full h-[100dvh] overflow-hidden bg-gradient-to-b from-[#0f0f0f] to-[#1a1a1a]">
+    <body
+        class="font-['JetBrains+Mono',monospace] min-h-screen bg-black text-white"
+    >
+        <header></header>
+        <main class="relative">
             <!-- Fondo -->
-            <article class="hero--page__image absolute inset-0 -z-10 overflow-hidden">
-                <picture class="absolute inset-0 block h-full w-full" alt="">
-                    <source media="(max-width: 600px)" srcset="./assets/images/hero/mobile.png" alt="">
-                    <img src="./assets/images/hero/desktop.png" alt=""
-                        class="block h-full w-full object-cover scale-105">
-                </picture>
-                <div aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-black via-black/0 to-transparent">
-                    <img aria-hidden="true" src="./assets/images/hero/noise.png"
-                        class="absolute top-0 left-0 w-[100dvw] h-[100dvh] object-cover z-10" alt="">
-                </div>
-            </article>
-            <!-- Contenido -->
-            <article class="hero--page__content relative z-10 flex w-full flex-col justify-center p-6 md:p-16">
-                <div class="self-start">
+            <section
+                class="-z-1 absolute top-0 left-0 right-0 flex flex-col md:flex-row md:flex-wrap h-[100dvh] w-full"
+            >
+                <article
+                    class="overflow-hidden w-full h-1/3 md:w-1/3 md:h-full grid place-items-center"
+                >
+                    <img
+                        aria-hidden="true"
+                        draggable="false"
+                        class="col-start-1 row-start-1 w-full h-full object-cover select-none pointer-events-none"
+                        src="./assets/images/hero/hero-1.webp"
+                        alt=""
+                    />
+                </article>
+
+                <article
+                    class="overflow-hidden w-full h-1/3 md:w-1/3 md:h-full grid place-items-center"
+                >
+                    <img
+                        aria-hidden="true"
+                        draggable="false"
+                        class="col-start-1 row-start-1 w-full h-full object-cover select-none pointer-events-none"
+                        src="./assets/images/hero/hero-2.webp"
+                        alt=""
+                    />
+                </article>
+
+                <article
+                    class="overflow-hidden w-full h-1/3 md:w-1/3 md:h-full grid place-items-center"
+                >
+                    <img
+                        aria-hidden="true"
+                        draggable="false"
+                        class="col-start-1 row-start-1 w-full h-full object-cover select-none pointer-events-none"
+                        src="./assets/images/hero/hero-3.webp"
+                        alt=""
+                    />
+                </article>
+                <div class="absolute bottom-0 left-0 right-0 w-full h-full bg-linear-to-t from-black via-black/0 to-transparent"></div>
+                <img
+                    aria-hidden="true"
+                    draggable="false"
+                    class="z-10 absolute top-0 left-0 right-0 mix-blend-multiply opacity-50 w-full h-full object-cover select-none pointer-events-none"
+                    src="./assets/images/hero/riso_texture.webp"
+                    alt=""
+                />
+            </section>
+
+            <!-- Contenido Hero -->
+            <section
+                class="z-1 flex flex-col md:items-center justify-center w-full h-[100dvh]"
+            >
+                <article class="flex flex-col md:items-center justify-center">
                     <h1
-                        class="text-[clamp(4rem,10vw,9rem)] leading-none font-normal text-white drop-shadow-md text-center md:text-left">
-                        Jheivy Moreno</h1>
+                        class="inline-block text-[clamp(5rem,8dvw,10rem)] leading-none text-left md:text-center"
+                    >
+                        Código preciso,
+                    </h1>
                     <p
-                        class="mt-4 mx-auto max-w-[45rem] text-center text-base text-white/80 md:mr-0 md:ml-auto md:text-right md:text-xl md:translate-x-[25%]">
-                        Desarrollador Full-Stack y Artista Colombiano. Creo experiencias digitales únicas donde el
-                        código, el diseño y la creatividad se encuentran.</p>
-                </div>
-            </article>
-        </section>
-    </main>
-
-    <footer>
-
-    </footer>
-</body>
-
+                        class="inline-block text-[clamp(3rem,10dvw,6rem)] leading-none text-left md:text-center"
+                    >
+                        diseño con <strong>alma.</strong>
+                    </p>
+                </article>
+                <p
+                    class="text-base md:text-xl text-left md:text-center max-w-none md:max-w-[40dvw]"
+                >
+                    Desarrollo productos digitales de principio a fin, interfaz,
+                    backend y datos. Y en paralelo, arte y danza. Dos oficios
+                    con el mismo criterio de detalle.
+                </p>
+            </section>
+        </main>
+        <footer></footer>
+    </body>
 </html>
