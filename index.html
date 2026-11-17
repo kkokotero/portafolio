@@ -31,8 +31,11 @@
                 --animate-marquee: marquee 25s linear infinite;
 
                 @keyframes marquee {
+                    from {
+                        transform: translate3d(0, 0, 0);
+                    }
                     to {
-                        transform: translateX(-50%);
+                        transform: translate3d(-50%, 0, 0);
                     }
                 }
             }
@@ -322,8 +325,9 @@
             <!-- ═════════ MARQUEE ═════════ -->
             <div class="overflow-hidden">
                 <section aria-hidden="true" class="relative overflow-hidden bg-pink text-ink border-y-2 border-ink -rotate-1 scale-105 my-10">
-                    <div class="marquee-track flex w-max animate-marquee py-4 font-serif text-4xl md:text-6xl whitespace-nowrap">
-                        <div class="flex shrink-0 items-center gap-8 pr-8">
+                    <div class="marquee-track flex w-max will-change-transform animate-marquee py-4 font-serif text-4xl md:text-6xl whitespace-nowrap">
+                        <!-- Unidad 1: al menos tan ancha como el viewport para que nunca haya huecos -->
+                        <div class="flex shrink-0 min-w-[100vw] items-center justify-around gap-8">
                             <span>Frontend</span>
                             <span class="text-white">●</span>
                             <span class="italic">Backend</span>
@@ -336,7 +340,8 @@
                             <span class="text-white">●</span>
                         </div>
 
-                        <div class="flex shrink-0 items-center gap-8 pr-8">
+                        <!-- Unidad 2: copia exacta; al transladar -50% se empalma con la primera -->
+                        <div class="flex shrink-0 min-w-[100vw] items-center justify-around gap-8" aria-hidden="true">
                             <span>Frontend</span>
                             <span class="text-white">●</span>
                             <span class="italic">Backend</span>
