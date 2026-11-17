@@ -1,27 +1,117 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#000000" />
         <title>Jheivy Silva - kkoko</title>
+        <meta
+            name="description"
+            content="Portafolio de Jheivy Silva. Desarrollo de productos digitales de principio a fin."
+        />
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
             rel="stylesheet"
         />
-        <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+        <style type="text/tailwindcss">
+            @theme {
+                --font-mono: "JetBrains Mono", ui-monospace, monospace;
+                --font-serif: "Instrument Serif", Georgia, serif;
+                --color-ink: #050505;
+                --color-paper: #f4efe6;
+                --color-pink: #ff48b0;
+                --color-blue: #0078bf;
+                --color-yellow: #ffe800;
+                --color-orange: #ff6c2f;
+                --color-green: #00a95c;
+            }
+
+            body:has(#about-me:target) .link-u[href="#about-me"],
+            body:has(#diciplines:target) .link-u[href="#diciplines"],
+            body:has(#projects:target) .link-u[href="#projects"],
+            body:has(#galery:target) .link-u[href="#galery"],
+            body:has(#stack:target) .link-u[href="#stack"] {
+                background-color: #f4efe6;
+                color: #010101;
+            }
+        </style>
     </head>
 
-    <body
-        class="font-['JetBrains+Mono',ui-monospace] min-h-screen bg-[#010101] text-white"
-    >
-        <header></header>
+    <body class="font-mono min-h-screen bg-[#010101] text-white">
+        <header
+            class="fixed top-0 inset-x-0 z-50 mix-blend-difference text-white"
+        >
+            <nav class="flex items-center justify-between px-5 md:px-10 py-5">
+                <a
+                    href="#inicio"
+                    class="font-serif text-3xl leading-none tracking-tight"
+                    >JS<span class="text-pink">*</span></a
+                >
+                <ul
+                    class="hidden md:flex items-center gap-8 text-xs uppercase tracking-[0.2em]"
+                >
+                    <li>
+                        <a
+                            class="link-u text-xs uppercase tracking-[0.2em] rounded-full px-5 py-2 hover:bg-white hover:text-black transition-colors"
+                            href="#about-me"
+                            >Sobre mí</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            class="link-u text-xs uppercase tracking-[0.2em] rounded-full px-5 py-2 hover:bg-white hover:text-black transition-colors"
+                            href="#disciplines"
+                            >Disciplinas</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            class="link-u text-xs uppercase tracking-[0.2em] rounded-full px-5 py-2 hover:bg-white hover:text-black transition-colors"
+                            href="#projects"
+                            >Proyectos</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            class="link-u text-xs uppercase tracking-[0.2em] rounded-full px-5 py-2 hover:bg-white hover:text-black transition-colors"
+                            href="#galery"
+                            >Galería</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            class="link-u text-xs uppercase tracking-[0.2em] rounded-full px-5 py-2 hover:bg-white hover:text-black transition-colors"
+                            href="#stack"
+                            >Stack</a
+                        >
+                    </li>
+                </ul>
+                <div class="flex items-center gap-3">
+                    <a
+                        href="#contact"
+                        class="text-xs uppercase tracking-[0.2em] border border-white rounded-full px-5 py-2 hover:bg-white hover:text-black transition-colors"
+                        >Hablemos</a
+                    >
+                    <button
+                        type="button"
+                        id="menu-btn"
+                        aria-label="Abrir menú"
+                        class="md:hidden grid gap-1.5 p-2"
+                        popovertarget="my-popover"
+                    >
+                        <span class="block w-6 h-[2px] bg-white"></span>
+                        <span class="block w-4 h-[2px] bg-white ml-auto"></span>
+                    </button>
+                </div>
+            </nav>
+        </header>
         <main class="relative">
             <!-- Fondo -->
             <section
-                class="-z-1 opacity-[35%] absolute top-0 left-0 right-0 flex flex-col md:flex-row md:flex-wrap h-[100dvh] w-full"
+                class="-z-1 opacity-0 md:opacity-[35%] absolute top-0 left-0 right-0 flex flex-col md:flex-row md:flex-wrap h-[100dvh] w-full"
             >
                 <article
                     class="overflow-hidden w-full h-1/3 md:w-1/3 md:h-full grid place-items-center"
@@ -72,33 +162,64 @@
 
             <!-- Contenido Hero -->
             <section
-                class="z-1 flex flex-col md:items-center justify-center w-full h-[100dvh]"
+                class="z-1 flex flex-col md:items-center justify-center w-full h-[100dvh] px-5 md:px-10 pt-16"
             >
-                <article class="flex flex-col md:items-center justify-center">
+                <article
+                    class="font-serif flex flex-col md:items-center justify-center"
+                >
                     <p
-                        class="text-base md:text-xl text-left md:text-center max-w-none md:max-w-[40dvw]"
+                        class="text-sm md:text-lg leading-none text-left md:text-center tracking-[0.35em] bg-pink text-black p-2"
                     >
                         Disponible para nuevos proyectos
                     </p>
                     <h1
-                        class="inline-block text-[clamp(3.2rem,11vw,10rem)] leading-none text-left md:text-center"
+                        class="mt-4 inline-block text-[clamp(3.2rem,11vw,10rem)] leading-[0.9] text-left md:text-center"
                     >
                         Código preciso,
                     </h1>
                     <p
-                        class="inline-block text-[clamp(2.6rem,9vw,8rem)] leading-none text-left md:text-center"
+                        class="inline-block text-[clamp(2.6rem,9vw,8rem)] leading-[0.95] text-left md:text-center"
                     >
-                        diseño con <strong class="font-['Instrument+Serif', Georgia] italic">alma.</strong>
+                        diseño con
+                        <em class="relative inline-block text-pink italic"
+                            >alma.
+                            <svg
+                                class="absolute -bottom-2 left-0 w-full"
+                                viewBox="0 0 200 12"
+                                fill="none"
+                                preserveAspectRatio="none"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    d="M2 8 C 40 0, 80 12, 120 5 S 180 4, 198 7"
+                                    stroke="#ffe800"
+                                    stroke-width="3"
+                                    stroke-linecap="round"
+                                />
+                            </svg>
+                        </em>
                     </p>
                 </article>
                 <p
-                    class="text-base md:text-xl text-left md:text-center max-w-none md:max-w-[40dvw]"
+                    class="mt-4 text-sm md:text-lg text-left md:text-center max-w-none md:max-w-[44ch] text-paper/90"
                 >
                     Desarrollo productos digitales de principio a fin, interfaz,
                     backend y datos. Y en paralelo, arte y danza. Dos oficios
                     con el mismo criterio de detalle.
                 </p>
+                <article>
+                    <a href="#projects">Ver Proyectos</a>
+                    <a href="#art-&-dance">Arte y Danza</a>
+                </article>
             </section>
+
+            <section id="about-me"></section>
+            <section id="disciplines"></section>
+            <section id="projects"></section>
+            <section id="galery"></section>
+            <section id="art-&-dance"></section>
+            <section id="stack"></section>
+            <section id="contact"></section>
         </main>
         <footer></footer>
     </body>
