@@ -1,0 +1,133 @@
+@import "tailwindcss";
+
+@theme {
+  --font-mono: "JetBrains Mono Variable", "JetBrains Mono", ui-monospace, monospace;
+  --font-serif: "Instrument Serif", Georgia, serif;
+  --color-ink: #050505;
+  --color-paper: #f1e9d9;
+  --color-pink: #d96a8f;
+  --color-blue: #2565a5;
+  --color-yellow: #c3d04f;
+  --color-orange: #e15055;
+  --color-green: #619836;
+
+  --animate-marquee: marquee 25s linear infinite;
+  --animate-spin-slow: spin 22s linear infinite;
+  --animate-floaty: floaty 6s ease-in-out infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+    to {
+      transform: translate3d(-50%, 0, 0);
+    }
+  }
+
+  @keyframes floaty {
+    0%,
+    100% {
+      translate: 0 0;
+    }
+    50% {
+      translate: 0 -1.25rem;
+    }
+  }
+}
+
+/* ── Navegación / scroll suave ── */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+/* ── Reveal: animación scroll-driven con fallback de carga ── */
+@keyframes reveal-in {
+  from {
+    opacity: 0;
+    translate: 0 2.5rem;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+.reveal {
+  animation: reveal-in 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  animation-delay: var(--d, 0ms);
+}
+
+@supports (animation-timeline: view()) {
+  .reveal {
+    animation-timeline: view();
+    animation-range: entry 5% cover 30%;
+    animation-delay: 0ms;
+  }
+}
+
+/* ── Tilt 3D: usa transform para componerse con el `rotate` de Tailwind v4 ── */
+.tilt {
+  transition:
+    transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1),
+    box-shadow 0.5s ease;
+  transform-style: preserve-3d;
+}
+
+.tilt:hover {
+  transform: perspective(1000px) rotateX(4deg) rotateY(-4deg) scale(1.02);
+  box-shadow: 0 30px 60px -20px rgb(0 0 0 / 0.65);
+}
+
+/* ── Trama halftone ── */
+.halftone {
+  background-image: radial-gradient(currentColor 1px, transparent 1.2px);
+  background-size: 7px 7px;
+}
+
+/* ── Texto outlined ── */
+@supports (-webkit-text-stroke: 1px black) {
+  .text-outline {
+    color: transparent;
+    -webkit-text-stroke: 2px var(--color-ink);
+  }
+}
+
+/* ── Nav activa según :target ── */
+body:has(#sobre-mi:target) .link-u[href="#sobre-mi"],
+body:has(#disciplinas:target) .link-u[href="#disciplinas"],
+body:has(#proyectos:target) .link-u[href="#proyectos"],
+body:has(#galeria:target) .link-u[href="#galeria"],
+body:has(#stack:target) .link-u[href="#stack"] {
+  background-color: #f1e9d9;
+  color: #010101;
+}
+
+body:has(#sobre-mi:target) .link-m[href="#sobre-mi"],
+body:has(#disciplinas:target) .link-m[href="#disciplinas"],
+body:has(#proyectos:target) .link-m[href="#proyectos"],
+body:has(#galeria:target) .link-m[href="#galeria"],
+body:has(#contacto:target) .link-m[href="#contacto"],
+body:has(#stack:target) .link-m[href="#stack"] {
+  text-decoration: underline;
+  font-style: italic;
+}
+
+/* ── Respeta prefers-reduced-motion ── */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-marquee,
+  .reveal,
+  [class*="animate-"] {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
